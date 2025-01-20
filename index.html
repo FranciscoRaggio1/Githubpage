@@ -9,22 +9,25 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1>Image Filter App</h1>
+            <h1>Aplicador de filtros de imágen</h1>
         </header>
         <main class="main-content">
             <div class="upload-section">
-                <label for="image-upload" class="upload-label">Upload an Image</label>
+                <label for="image-upload" class="upload-label">Subí tu imágen</label>
                 <input type="file" id="image-upload" accept="image/*">
             </div>
-            <div class="image-preview">
+            <div class="image-preview">                
                 <img id="preview" alt="Your image will appear here">
             </div>
             <div class="filters-section">
-                <button class="filter-btn" data-filter="grayscale(1)">Grayscale</button>
+                <button class="filter-btn" data-filter="grayscale(1)">Escala de grises</button>
                 <button class="filter-btn" data-filter="sepia(1)">Sepia</button>
-                <button class="filter-btn" data-filter="invert(1)">Invert</button>
-                <button class="filter-btn" data-filter="blur(4px)">Blur</button>
-                <button class="filter-btn" data-filter="none">Reset</button>
+                <button class="filter-btn" data-filter="invert(1)">Invertir</button>
+                <button class="filter-btn" data-filter="blur(4px)">Desenfoque</button>                
+                <button class="filter-btn" data-filter="none">Restaurar</button>
+            </div>
+            <div class="download-section">
+                <button id="download-btn" class="download-btn">Descargar</button>
             </div>
         </main>
     </div>

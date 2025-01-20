@@ -3,6 +3,8 @@
     --bg-color: #fffaf3;
     --text-color: #333;
     --border-radius: 8px;
+  
+    
 }
 
 body {
@@ -11,6 +13,9 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-color);
+   
+   
+    
 }
 
 .container {
@@ -18,6 +23,8 @@ body {
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    
+    
 }
 
 .header {
@@ -49,6 +56,7 @@ body {
 
 .image-preview {
     margin: 20px 0;
+    transition: 2s;
     border: 2px dashed var(--primary-color);
     padding: 20px;
     border-radius: var(--border-radius);
@@ -78,5 +86,50 @@ body {
 }
 
 .filter-btn:hover {
-    background-color: (var(--primary-color), 70%);
+    background-color: red;
+}
+
+/* Download button base styles */
+.download-section{
+    margin-top: 15%;
+}
+.download-btn {
+    
+    background-color: #ff7f50; /* Coral orange */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover animation for the download button */
+.download-btn:hover {
+    background-color: #e96b3a; /* Slightly darker orange */
+}
+
+/* Adding the + symbol on hover */
+.download-btn::after {
+    content: '+';
+    font-size: 24px;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.download-btn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Hiding the text on hover */
+.download-btn:hover {
+    color: transparent;
 }
